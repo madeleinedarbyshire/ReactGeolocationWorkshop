@@ -29,10 +29,10 @@ npx expo start --tunnel
 
 ## History Page
 Once you have started the app, navigate to the history and open _screens/HistoryScreen.js_ . You will see a series of TODOs that correspond to the following instructions.
-![home](https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/home.jpg)
-
-![history](https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_empty.jpg)
-
+<div align="center">
+    <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/home.jpg" height="700">
+    <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_empty.jpg" height="700">
+</div>
 1. At the moment, there isn't any history so in _retrieveHistory_ the _value_ returned by `await AsyncStorage.getItem("routes")` will be null. There inside the condition we are going to use demoRoutes imported from _'../components/Routes.js'_ and set routes to that. After that, we call _retrieveHistory_ again.
     ```javascript
     await AsyncStorage.setItem("routes", JSON.stringify(demoRoutes));
@@ -45,24 +45,39 @@ Once you have started the app, navigate to the history and open _screens/History
     console.log(history);
     ```
 
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_line.jpg" height="700">
+    </div>
+
 3. To list the contents of Routes we use the function Object.keys(history).map(item). Object.keys() returns a list of keys. In this case there's just one: "Lincoln". Mapping over this list we can add the name to the empty `ColumnText` of the route with:
     ```jsx
     <ColumnText>{item}</ColumnText> 
     ```
 
 4. Now add the date. You need the first timestamp `history[item][0].timestamp` and convert it to a date using the `timestampToDate` function defined at the top of the file.
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_date.jpg" height="700">
+    </div>
 
 5. Next add the distance, call the imported calculateDistance function with a list of coords.
     ```jsx
     <ColumnText>{calculateDistance(history[item])}</ColumnText>
     ```
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_distance.jpg" height="700">
+    </div>
 6. Then add the time, call the imported calculateTime finction with a list of coords.
     ```jsx
     <ColumnText>{calculateTime(history[item])}</ColumnText>
     ```
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_duration.jpg" height="700">
+    </div>
 
 7. Lastly, complete the onPress so that you navigate to the map screen when the TouchButton is pressed (which corresponds to each row of the history). You will need to pass the route co-ordinates to the map screen as a parameter `{routeCoords: history[item]}`
-
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/map.jpg" height="700">
+    </div>
 
 ## Map page
 1. Implement a polyline using the route co-ordinates. Set the coordinates property to the coords and set a strokeColor property to a colour of your choosing.
@@ -74,11 +89,17 @@ Once you have started the app, navigate to the history and open _screens/History
         geodesic={true}
         showsMyLocationButton={false} />
     ```
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/map_line.jpg" height="700">
+    </div>
 
 2. Set customMapStyle on `MapView` to add some custom styling. You can update this styling as you wish in _components/MapStyle.json_.
     ```javascript
     customMapStyle={mapStyle}
     ```
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/map_custom.jpg" height="700">
+    </div>
 
 ## Tracking page
 Go back to the app homepage and select the Track option and open _screens/TrackScreen.js_.
@@ -100,6 +121,9 @@ Go back to the app homepage and select the Track option and open _screens/TrackS
     ```
 
 4. Update the function on the 'Track' button so that is calls to the startTracking function when pressed.
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/tracker_home.jpg" height="700">
+    </div>
 
 5. In StopTracking stop watching the position by calling ClearWatch:
     ```javascript
@@ -114,10 +138,16 @@ Go back to the app homepage and select the Track option and open _screens/TrackS
 7. Once you are finished, navigate to the MapScreen with the route you've just collected as routeCoords.
 
 8. Update the function on the 'Stop' button so that is calls to the stopTracking function when pressed.
+   <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/tracker_running.jpg" height="700">
+   </div>
+
 
 ## Test your app!
 
 1. Go outside and walk around the building and see if you can record a route! Tips: 
     - Use the mobile network from the start because eduroam will be patchy outside. 
     - I recommend leaving the building, switching off wifi and connecting to the development server from inside the app once you're outside.
-
+    <div align="center">
+        <img src="https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/track_test.jpg" height="700">
+   </div>
