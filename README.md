@@ -1,13 +1,3 @@
-<style type="text/css">
-  img { max-height: 500px;
-        border-style: solid;
-        border-width: thin;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-      }
-</style>
-
 # React Native Geolocation Workshop
 This is the 3rd React Native development workshop for Cross Platform Development (CMP3035)
 
