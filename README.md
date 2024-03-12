@@ -2,6 +2,8 @@
 This is the 3rd React Native development workshop for Cross Platform Development (CMP3035)
 
 ## Getting Started
+As in the previous lab, you will need node and expo. From the expo cli, you can run your app on your device or in Android simulator. Follow [this guide](https://madeleinedarbyshire.github.io/CMP3035/guides/start)  on getting started if you're unsure how to do this.
+
 1. In this lab, we are going to start with some skeleton code. Clone the following repo to get started:
 ```
 git clone https://github.com/madeleinedarbyshire/ReactGeolocationWorkshop.git
