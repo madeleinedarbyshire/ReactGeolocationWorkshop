@@ -1,4 +1,4 @@
-# React Geolocation Workshop
+# React Native Geolocation Workshop
 This is the 3rd React Native development workshop for Cross Platform Development (CMP3035)
 
 ## Getting Started
@@ -9,7 +9,7 @@ git clone https://github.com/madeleinedarbyshire/ReactGeolocationWorkshop.git
 
 2. Install dependancies
 ```
-cd CMP3035/wk7/exercise-tracker
+cd ReactGeolocationWorkshop/exercise-tracker
 npx expo install
 npx expo start --tunnel
 ```
