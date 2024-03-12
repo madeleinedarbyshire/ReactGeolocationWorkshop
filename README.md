@@ -1,7 +1,10 @@
+# React Geolocation Workshop
+This is the 3rd React Native development workshop for Cross Platform Development (CMP3035)
+
 ## Getting Started
 1. In this lab, we are going to start with some skeleton code. Clone the following repo to get started:
 ```
-git clone ...
+git clone https://github.com/madeleinedarbyshire/ReactGeolocationWorkshop.git
 ```
 
 2. Install dependancies
@@ -15,12 +18,12 @@ npx expo start --tunnel
 1. Log into [Google Cloud Platform](https://console.cloud.google.com/home/dashboard) with your existing Google account (if you have one). Otherwise create a Google account and then log in.
 
 2. Once you log in select Create Project.
-![Create Project](../assets/gmaps/create_project.png)
+    ![Create Project](https://madeleinedarbyshire.github.io/CMP3035/assets/gmaps/create_project.png)
 
 3. Name your project and select Create.
 
 4. Back on the dashboard, in the left side bar, select APIs & Services on the left side bar and select Library from the menu.
-![APIs](../assets/gmaps/apis.png)
+    ![APIs](https://madeleinedarbyshire.github.io/CMP3035/assets/gmaps/apis.png)
 
 5. Now follow the instructions to enable to the Google Maps API on either [Android](https://madeleinedarbyshire.github.io/CMP3035/guides/gmapsandroid) or [iOS](https://madeleinedarbyshire.github.io/CMP3035/guides/gmapsios). Remember, for your assignments, you need to integrate with the Android API, however, if you would like your app to work on your iPhone you will can intergrate with the iOS API too.
 
