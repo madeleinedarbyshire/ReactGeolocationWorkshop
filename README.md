@@ -1,3 +1,13 @@
+<style type="text/css">
+  img { max-height: 500px;
+        border-style: solid;
+        border-width: thin;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+</style>
+
 # React Native Geolocation Workshop
 This is the 3rd React Native development workshop for Cross Platform Development (CMP3035)
 
@@ -29,6 +39,9 @@ npx expo start --tunnel
 
 ## History Page
 Once you have started the app, navigate to the history and open _screens/HistoryScreen.js_ . You will see a series of TODOs that correspond to the following instructions.
+![home](https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/home.jpg)
+
+![history](https://madeleinedarbyshire.github.io/CMP3035/assets/workshop3/history_empty.jpg)
 
 1. At the moment, there isn't any history so in _retrieveHistory_ the _value_ returned by `await AsyncStorage.getItem("routes")` will be null. There inside the condition we are going to use demoRoutes imported from _'../components/Routes.js'_ and set routes to that. After that, we call _retrieveHistory_ again.
     ```javascript
