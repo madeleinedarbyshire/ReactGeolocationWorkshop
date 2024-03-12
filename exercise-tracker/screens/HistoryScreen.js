@@ -65,8 +65,7 @@ export default function HistoryScreen({ route, navigation }) {
             <TouchButton key={item} onPress={() => null}>
               <RowStyle key={item}>
                 <ColumnStyle key="col1">
-                  {/* TODO 3: Add the name of the route .*/}
-                  <ColumnText>{item}</ColumnText> 
+                  <ColumnText>{/* TODO 3: Add the name of the route .*/}</ColumnText> 
                 </ColumnStyle>
                 <ColumnStyle key="col2">
                   <ColumnText>{/* TODO 4: Add the date. Convert the timestamp using timestampToDate. */}</ColumnText>
