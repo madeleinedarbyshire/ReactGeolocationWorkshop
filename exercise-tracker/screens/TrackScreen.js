@@ -62,7 +62,7 @@ export default function TrackScreen({ navigation }) {
 
   const startTracking = () => {
     if (text == '') {
-      Alert('please add a route name');
+      alert('please add a route name');
       return;
     }
     //TODO 2: Get watch id from navigator.geolocation.watchPosition and set this using setWatchID
